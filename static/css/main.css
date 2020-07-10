@@ -1,0 +1,139 @@
+.wrap{
+    width: 60%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    overflow: hidden;
+	margin: auto;
+}
+
+h1 {
+    width: 30%;
+    margin: 0rem auto;
+    text-align: center;
+}
+
+form {
+    width: 60%;
+    margin: 0rem auto;
+    text-align: center;
+
+}
+
+.slug, .url {
+    margin: 0rem 0 2rem;
+    color: black;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 30px;
+}
+.slug{
+    margin-top: 0.5rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button{
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+span {
+    margin-top: 1.5em;
+    text-align:center;
+    align-items: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    *{
+        font-size: 30px;
+    },
+    body{
+        background-color: lightblue;
+    },
+    .wrap{
+    width: 60%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    overflow: hidden;
+	margin: auto;
+}
+
+}
+
+.error{
+    font-family: sans-serif, Helvetica, Arial;
+    text-align: center;
+    margin-top: 20%;
+
+}
+
+.errorwrapper{
+    display:flex;
+    align-items: center;
+}
+.mainpage {
+  display: block;
+  margin: 20% auto 0 auto;
+  padding: 1rem 1.25rem;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: all .3s cubic-bezier(.2, 0, 0, 1);
+  z-index: 1;
+}
+
+.mainpage:after {
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 1.25rem;
+    left: 1.25rem;
+    background-color: black;
+    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
+  }
+
+.mainpage:hover {
+    color: white;
+}
+
+.mainpage:hover:after {
+      right: 0;
+      left: 0;
+      height: 100%;
+}
+
+

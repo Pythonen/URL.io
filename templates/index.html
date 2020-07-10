@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Url.io</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="wrap">
+        <h1>Short urls makes life easier</h1>
+        <form action="/newurl" method="POST">
+            <div class="wrapper">
+                <input type="text" class="slug" name="slug" id="slug" placeholder="Enter a slug">
+                <input type="text" class="url" name="url" id="url" placeholder="Enter a url">
+                <input class="button" type="submit" value="Shorten">
+                <span>{% if succeeded %}{{ 'https://url-io.herokuapp.com/' + slug }}{%endif%}</span>
+                <span>{% if not succeeded %}{{ exception }}{%endif%}</span>
+                <span>{% if not succeeded %}{{ in_use }}{% endif %}</span>
+                <span>{% if not valid %}{{ err }}{% endif %}</span>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
